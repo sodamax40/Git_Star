@@ -5,6 +5,6 @@ tensorflow==2.10.0
 keras==2.10.0
 numpy
 future
-Pandas
-Job lib
-Scikit-learn
+pandas
+joblib
+scikit-learn
