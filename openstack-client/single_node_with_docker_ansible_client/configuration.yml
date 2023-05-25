@@ -32,6 +32,7 @@
         recurse: yes
         owner: appuser
         group: appuser
+
     - name: Download pip package
       apt: pkg=python3-pip state=latest update_cache=true
       become: true
@@ -105,7 +106,7 @@
       become: true
       shell: docker compose up -d
       args:
-        chdir: /Git_Star/ci_cd/production_server
+        chdir: /home/Git_Star/ci_cd/production_server
 
 - hosts: devserver
 
