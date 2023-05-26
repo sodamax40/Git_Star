@@ -26,7 +26,7 @@ model = 'rfc_model.m'
 
 
 def load_data():
-    data = pd.read_csv('repositories.csv').iloc[:, 1:]
+    data = pd.read_csv(data_file).iloc[:, 1:]
     X = data.drop(['star_count'], axis=1)
     y = data.star_count
     s = StandardScaler()
@@ -75,9 +75,7 @@ def predictions():
 
         test_score = r2_score(y, predictions)
         a = test_score
-
         accuracy = a
-
         results['predicted'] = []
         results['y'] = []
         for i in range(5):
